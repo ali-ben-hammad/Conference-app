@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: wallet-service
+          uri: lb://wallet-service
+          predicates:
+            - Path=/wallets/**
+          filters:
+            - RewritePath=/wallets/(?<remaining>.*), /${remaining}
+        - id: transfer-service
+          uri: lb://transfer-service
+          predicates:
+            - Path=/transfers/**
+          filters:
+            - RewritePath=/wallets/(?<remaining>.*), /${remaining}
+
+

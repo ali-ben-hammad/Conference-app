@@ -6,7 +6,7 @@
 
 The conference management application is built using a microservices architecture. The following microservices are implemented:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/0f51083e-e805-4aa3-a977-ea31d5792547/image.png)
+![Alt Text](./images/images-000.png)
 
 1. **Keynote Service**: Manages the keynote speakers, including their id, name, email, and function.
 2. **Conference Service**: Manages the conferences, including their id, title, type (academic or commercial), date, duration, number of attendees, and score. It also handles the reviews for each conference, including the review id, date, text, and rating (1-5 stars).
@@ -23,9 +23,11 @@ The application also utilizes the following technologies:
 
 ---
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/ebbcd363-07be-4e13-8a54-34eae192761e/image.png)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/aaf6c324-f113-4ec5-8f3c-aead55134165/image.png)
+![Alt Text](./images/images-001.png)
+
+
+![Alt Text](./images/images-002.png)
 
 ## 2. Project Setup
 
@@ -42,7 +44,8 @@ The project is set up as a Maven multi-module project with the following modules
 
 The `discovery-service` is implemented using  Consul Discovery, which enables service discovery and registration.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/b267f005-57e7-49e2-bcd3-517b5404b9bc/image.png)
+
+![Alt Text](./images/images-003.png)
 
 The `gateway-service` is implemented using Spring Cloud Gateway, which handles routing, security, and load balancing for the application.
 
@@ -77,7 +80,8 @@ The `keynote-service` is responsible for managing the keynote speakers. It inclu
 - **Mapper**: KeynoteMapper
 - **REST Controller**: KeynoteController
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/b7cc2416-c1e6-4c50-ba70-913cf69dcc5d/image.png)
+
+![Alt Text](./images/images-004.png)
 
 ## 5. Implementing the Conference Service
 
@@ -91,18 +95,22 @@ The `conference-service` is responsible for managing the conferences and their r
 - **REST Controller**: ConferenceController
 - **Open Feign Client**: KeynoteClient
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/acb40162-b1db-4156-9689-bb27e538840a/image.png)
+
+![Alt Text](./images/images-005.png)
 
 ## 6. Developing the Angular Front-end App
 
 The `angular-front-app` is the web-based user interface for the conference management application. It consumes the REST APIs provided by the `keynote-service` and `conference-service`.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/a8ee34af-2473-4e19-a065-99ce79dd9968/image.png)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/f5f786a2-7bb5-4fbc-a2e4-d8570fe8aa2a/image.png)
+![Alt Text](./images/images-006.png)
+
+
+![Alt Text](./images/images-007.png)
 
 ## 7. Securing the Application with Keycloak
 
 The application is secured using OAuth2 and OIDC with Keycloak as the Identity Provider. Users can log in to the application using the Keycloak login form.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7efb5cee-835a-46c2-a61f-58ed4cbe0c9c/40b30c29-e780-4170-8294-369095bb036a/image.png)
+
+![Alt Text](./images/images-008.png)

@@ -31,6 +31,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.disable()))
                 .authorizeHttpRequests(ar -> ar.requestMatchers("h2-console/**").permitAll())
+                .authorizeHttpRequests(ar -> ar.requestMatchers("swagger-ui/**").permitAll())
               //  .authorizeHttpRequests(ar -> ar.requestMatchers("/api/wallets").hasAuthority("USER"))
                 .authorizeHttpRequests(ar -> ar.anyRequest().authenticated())
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthConverter)))

@@ -3,7 +3,7 @@ package enset.ali.conferenceservice.services;
 import enset.ali.conferenceservice.DTOs.ReviewDTO;
 import enset.ali.conferenceservice.entities.Review;
 import enset.ali.conferenceservice.exceptions.ReviewNotFoundException;
-import enset.ali.conferenceservice.fiegn.WalletRestClient;
+import enset.ali.conferenceservice.fiegn.KeynoteRestClient;
 import enset.ali.conferenceservice.mappers.ReviewMapper;
 import enset.ali.conferenceservice.repositories.ReviewRepository;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ import java.util.List;
 public class ReviewServiceImpl implements ReviewService {
     private ReviewRepository reviewRepository;
     private ReviewMapper reviewMapper;
-    private final WalletRestClient walletRestClient;
+    private final KeynoteRestClient keynoteRestClient;
     @Override
     public List<ReviewDTO> getReviews() {
         List<ReviewDTO> reviewDTOS = reviewRepository

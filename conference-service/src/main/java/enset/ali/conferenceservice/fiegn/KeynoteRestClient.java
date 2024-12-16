@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @FeignClient(name = "wallet-service")
-public interface WalletRestClient {
+public interface KeynoteRestClient {
     @GetMapping("/api/keynotes/{id}")
     Conference getWalletById(@PathVariable UUID id);
 

@@ -3,7 +3,7 @@ package enset.ali.conferenceservice.services;
 import enset.ali.conferenceservice.DTOs.ConferenceDTO;
 import enset.ali.conferenceservice.entities.Conference;
 import enset.ali.conferenceservice.exceptions.ConferenceNotFoundException;
-import enset.ali.conferenceservice.fiegn.WalletRestClient;
+import enset.ali.conferenceservice.fiegn.KeynoteRestClient;
 import enset.ali.conferenceservice.mappers.ConferenceMapper;
 import enset.ali.conferenceservice.repositories.ConferenceRepository;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ import java.util.List;
 public class ConferenceServiceImpl implements ConferenceService {
     private ConferenceRepository conferenceRepository;
     private ConferenceMapper conferenceMapper;
-    private final WalletRestClient walletRestClient;
+    private final KeynoteRestClient keynoteRestClient;
     @Override
     public List<ConferenceDTO> getConferences() {
         List<ConferenceDTO> conferenceDTOS = conferenceRepository

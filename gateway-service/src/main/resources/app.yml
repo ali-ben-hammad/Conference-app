@@ -2,17 +2,17 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: wallet-service
-          uri: lb://wallet-service
+        - id: keynote-service
+          uri: lb://keynote-service
           predicates:
-            - Path=/wallets/**
+            - Path=/keynotes/**
           filters:
             - RewritePath=/wallets/(?<remaining>.*), /${remaining}
-        - id: transfer-service
-          uri: lb://transfer-service
+        - id: conference-service
+          uri: lb://conference-service
           predicates:
-            - Path=/transfers/**
+            - Path=/conferences/**
           filters:
-            - RewritePath=/wallets/(?<remaining>.*), /${remaining}
+            - RewritePath=/keynotes/(?<remaining>.*), /${remaining}
 
 

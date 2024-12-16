@@ -1,0 +1,48 @@
+<div class="container mx-auto px-4 py-8 mt-12">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Conferences</h1>
+    <button (click)="openCreateModal()" class="btn">+ Add Conference</button>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="table table-zebra">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Duration</th>
+          <th>Registered</th>
+          <th>Score</th>
+          <th>Status</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let conference of conferences">
+          <th>{{ conference.id }}</th>
+          <td>{{ conference.titre }}</td>
+          <td>{{ conference.date | date:'shortDate' }}</td>
+          <td>{{ conference.duree }} hours</td>
+          <td>{{ conference.nombreInscrits }}</td>
+          <td>{{ conference.score }}</td>
+          <td>{{ conference.status }}</td>
+          <td class="text-center">
+            <div class="flex justify-center space-x-2">
+              <button
+                (click)="editConference(conference)"
+                class="text-blue-500 hover:text-blue-700 transition duration-300">
+                Edit
+              </button>
+              <button
+                (click)="deleteConference(conference.id)"
+                class="text-red-500 hover:text-red-700 transition duration-300">
+                Delete
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

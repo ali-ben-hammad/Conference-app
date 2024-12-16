@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @AllArgsConstructor
-@RequestMapping("/api/confrences")
+@RequestMapping("/api/conferences")
 @RestController
 public class ConferenceRestController {
     private ConferenceService conferenceService;

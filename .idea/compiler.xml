@@ -7,19 +7,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="conferance-service" />
         <module name="config-service" />
-        <module name="wallet-service" />
+        <module name="keynote-service" />
         <module name="gateway-service" />
-        <module name="transfer-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="conference-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="conferance-service" options="-parameters" />
+      <module name="conference-service" options="-parameters" />
       <module name="config-service" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
-      <module name="transfer-service" options="-parameters" />
-      <module name="wallet-service" options="-parameters" />
+      <module name="keynote-service" options="-parameters" />
     </option>
   </component>
 </project>
